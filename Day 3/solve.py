@@ -1,6 +1,6 @@
 def solvept1():
     total = 0
-    for i in data:
+    for i in lines:
         for j in i[:len(i)//2]:
             if j in i[len(i)//2:]:
                 total += priority(j)
@@ -11,8 +11,8 @@ def solvept1():
 def solvept2():
     total = 0
     i = 0
-    while i <= len(data) - 3:
-        first, second, third = data[i], data[i+1], data[i+2]
+    while i <= len(lines) - 3:
+        first, second, third = lines[i], lines[i+1], lines[i+2]
         for j in first:
             if j in second and j in third:
                 total += priority(j)
@@ -26,5 +26,6 @@ def priority(a):
 
 
 if __name__ == "__main__":
-    data = open("Day 3/day3input.txt", "r").readlines()
+    with open("Day 3/day3input.txt", "r") as data: 
+        lines = data.readlines()
     print(solvept1(), solvept2())

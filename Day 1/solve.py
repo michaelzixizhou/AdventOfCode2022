@@ -1,6 +1,6 @@
 def solve() -> int:
     most = second = third = curr = 0
-    for line in data:
+    for line in lines:
         # separate by newline
         if line == '\n':
             curr = 0
@@ -19,5 +19,6 @@ def solve() -> int:
 
 
 if __name__ == "__main__":
-    data = open('Day 1/day1input.txt', 'r').readlines()
+    with open('Day 1/day1input.txt') as data:
+        lines = data.readlines()
     print(solve())
