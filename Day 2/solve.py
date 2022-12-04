@@ -1,6 +1,6 @@
 def solve():
     total = 0
-    for i in data:
+    for i in lines:
         # total += points(i[2])
         total += matchup(i[2], i[0])
     return total 
