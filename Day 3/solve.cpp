@@ -7,13 +7,13 @@ using namespace std;
 
 int priority(char a) {
     int c = a;
-    // if (c >= 97) {
+    return (c >= 97) ? c -96 : c - 38;
+
+        // if (c >= 97) {
     //     return c - 96;
     // } else {
     //     return c - 38;
     // }
-
-    return (c >= 97) ? c -96 : c - 38;
 }
 
 int solvept1(ifstream &a){
